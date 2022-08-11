@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(#200016, #10001f);
+    height: 100vh;
+    font-family: system-ui;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+    position: fixed;
+    width: 95%;
+    z-index: 100;
+}
+
+header h2 {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+}
+
+header ul li {
+    margin-right: 5px;
+
+}
+
+header ul li a {
+    padding: 6px 20px;
+    border-radius: 6px;
+}
+
+header ul li a:hover,
+.active {
+    background-color: #fff;
+    color: #200016
+}
+
+span {
+    padding: 6px 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #200016;
+    display: none;
+
+}
+
+@media (max-width:667px) {
+
+    header {
+        padding: 20px 0;
+        margin: 15px;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    header ul {
+        display: block;
+        position: relative;
+        right: -50%;
+        top: 26px;
+        width: 100%;
+        margin: auto;
+        top: -212px;
+        transition: all 0.5s;
+
+
+    }
+
+    .active {
+        background: none;
+        color: #fff;
+    }
+
+    header ul li {
+        margin: 15px 0;
+    }
+
+    .main h2 {
+        font-size: 18px;
+    }
+
+    span {
+        display: block;
+        position: relative;
+
+    }
+}
+
+
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top, #200016, transparent);
+}
+
+.main img {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.main #moon {
+    mix-blend-mode: screen;
+    transform: translateY(70px);
+}
+
+.main h2 {
+    color: #fff;
+    font-size: 20px;
+    transform: translateY(-140px);
+}
+
+.content {
+    padding: 30px;
+    color: #fff
+}
+
+.content h2 {
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+.content p {
+
+    margin: 20px;
+}
